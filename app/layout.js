@@ -1,5 +1,5 @@
-import Header from '@/components/Header';
 import './globals.css';
+import RootHeader from '@/components/RootHeader/RootHeader';
 
 export const metadata = {
   title: 'NextLevel Food',
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           </svg>
         </div> */}
 
-        <Header/>
+        <RootHeader/>
 
         {children}
       </body>

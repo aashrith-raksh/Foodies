@@ -6,7 +6,7 @@ import logo from "@/assets/logo.png";
 import Image from "next/image";
 import Background from "./Background";
 
-const Header = () => {
+const RootHeader = () => {
   return (
     <>
       <Background />
@@ -30,4 +30,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default RootHeader;
