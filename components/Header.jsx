@@ -1,27 +1,32 @@
 import Link from "next/link";
 import React from "react";
 
-import styles from "./header.module.css"
-import logo from "@/assets/logo.png"
+import classes from "./header.module.css";
+import logo from "@/assets/logo.png";
+import Image from "next/image";
+import Background from "./Background";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <Link href={"/"} className={styles.logo}>
-        <img src={logo.src} alt="Logo" />
-        Foodies
-      </Link>
-      <nav className={styles.nav}>
-        <ul>
-          <li>
-            <Link href="/meals">Latest Meals</Link>
-          </li>
-          <li>
-            <Link href="/community">Community</Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <>
+      <Background />
+      <header className={classes.header}>
+        <Link href={"/"} className={classes.logo}>
+          <Image src={logo} alt="Logo" priority />
+          Foodies
+        </Link>
+        <nav className={classes.nav}>
+          <ul>
+            <li>
+              <Link href="/meals">Latest Meals</Link>
+            </li>
+            <li>
+              <Link href="/community">Community</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </>
   );
 };
 
