@@ -1,4 +1,4 @@
-import { getMeals } from '@/app/lib/meals';
+import { getMeals } from '@/lib/meals';
 import MealItem from './meal-item';
 import classes from './meals-grid.module.css';
 
