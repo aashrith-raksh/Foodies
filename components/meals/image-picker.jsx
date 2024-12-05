@@ -42,7 +42,7 @@ export default function ImagePicker({ label, name }) {
       </div>
       <div className={classes.controls}>
         <input
-        required
+          required
           className={classes.input}
           type="file"
           id={name}

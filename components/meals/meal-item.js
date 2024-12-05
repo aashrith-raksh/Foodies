@@ -1,7 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
-import classes from './meal-item.module.css';
+import classes from "./meal-item.module.css";
+import DeleteMealForm from "./delete-meal-form";
 
 export default function MealItem({ title, slug, image, summary, creator }) {
   return (
@@ -18,6 +19,7 @@ export default function MealItem({ title, slug, image, summary, creator }) {
       <div className={classes.content}>
         <p className={classes.summary}>{summary}</p>
         <div className={classes.actions}>
+          <DeleteMealForm mealId={slug} />
           <Link href={`/meals/${slug}`}>View Details</Link>
         </div>
       </div>
